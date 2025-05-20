@@ -1,0 +1,86 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Site Persos",
+    "section": "",
+    "text": "Ceci est mon site web personnelle.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "Exo_sf_R.html",
+    "href": "Exo_sf_R.html",
+    "title": "Exercice corrigé sf",
+    "section": "",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "Exo_sf_R.html#b.1-séléctionnez-par-attribut-ou-par-localisation-uniquement-les-localités-du-sénégal.",
+    "href": "Exo_sf_R.html#b.1-séléctionnez-par-attribut-ou-par-localisation-uniquement-les-localités-du-sénégal.",
+    "title": "Exercice corrigé sf",
+    "section": "B.1 Séléctionnez (par attribut ou par localisation) uniquement les localités du Sénégal.",
+    "text": "B.1 Séléctionnez (par attribut ou par localisation) uniquement les localités du Sénégal."
+  },
+  {
+    "objectID": "Exo_sf_R.html#b.2-calculez-le-nombre-de-services-présents-dans-chaque-localité.",
+    "href": "Exo_sf_R.html#b.2-calculez-le-nombre-de-services-présents-dans-chaque-localité.",
+    "title": "Exercice corrigé sf",
+    "section": "B.2 Calculez le nombre de services présents dans chaque localité.",
+    "text": "B.2 Calculez le nombre de services présents dans chaque localité.\n#Assignez le résultat dans une nouvelle colonne de la couche géographique des localités sénégalaises. #nom ds colones colnames(loc_sn_2)\nloc_sn_2$servtt &lt;- rowSums(loc_sn_2[, 5:17, drop=TRUE])"
+  },
+  {
+    "objectID": "Exo_sf_R.html#b.3-découpez-le-réseau-routier-en-fonction-des-limites-du-sénégal.",
+    "href": "Exo_sf_R.html#b.3-découpez-le-réseau-routier-en-fonction-des-limites-du-sénégal.",
+    "title": "Exercice corrigé sf",
+    "section": "B.3 Découpez le réseau routier en fonction des limites du Sénégal.",
+    "text": "B.3 Découpez le réseau routier en fonction des limites du Sénégal.\nroutes_sn &lt;- st_filter(x = Routes , y = sen , predicate = st_intersects)"
+  },
+  {
+    "objectID": "Exo_sf_R.html#d.1.-calculez-un-buffer-de-50-km-autour-dussein",
+    "href": "Exo_sf_R.html#d.1.-calculez-un-buffer-de-50-km-autour-dussein",
+    "title": "Exercice corrigé sf",
+    "section": "D.1. Calculez un buffer de 50 km autour d’USSEIN",
+    "text": "D.1. Calculez un buffer de 50 km autour d’USSEIN"
+  },
+  {
+    "objectID": "Exo_sf_R.html#d.2.-séléctionnez-les-localités-situées-dans-la-zone-tampon-de-50km",
+    "href": "Exo_sf_R.html#d.2.-séléctionnez-les-localités-situées-dans-la-zone-tampon-de-50km",
+    "title": "Exercice corrigé sf",
+    "section": "D.2. Séléctionnez les localités situées dans la zone tampon de 50km",
+    "text": "D.2. Séléctionnez les localités situées dans la zone tampon de 50km"
+  },
+  {
+    "objectID": "Exo_sf_R.html#d.3-combien-de-ces-localités-abritent-au-moins-une-école",
+    "href": "Exo_sf_R.html#d.3-combien-de-ces-localités-abritent-au-moins-une-école",
+    "title": "Exercice corrigé sf",
+    "section": "D.3 Combien de ces localités abritent au moins une école ?",
+    "text": "D.3 Combien de ces localités abritent au moins une école ?"
+  },
+  {
+    "objectID": "Exo_sf_R.html#e.1-créez-un-maillage-régulier-de-carreaux-de-50km-de-côté-sur-lensemble-du-sénégal",
+    "href": "Exo_sf_R.html#e.1-créez-un-maillage-régulier-de-carreaux-de-50km-de-côté-sur-lensemble-du-sénégal",
+    "title": "Exercice corrigé sf",
+    "section": "E.1 Créez un maillage régulier de carreaux de 50km de côté sur l’ensemble du Sénégal",
+    "text": "E.1 Créez un maillage régulier de carreaux de 50km de côté sur l’ensemble du Sénégal\ngrille_sn &lt;- st_make_grid(x = sen, cellsize = 20000) # Transformer la grille en objet sf avec st_sf() mf_map(x = grille_sn)\ntypeof(grille_sn)\ngrille_sn &lt;- st_as_sf(grille_sn) typeof(grille_sn)"
+  },
+  {
+    "objectID": "Exo_sf_R.html#e.2-récuperez-le-carreau-dappartenance-id-de-chaque-localité.",
+    "href": "Exo_sf_R.html#e.2-récuperez-le-carreau-dappartenance-id-de-chaque-localité.",
+    "title": "Exercice corrigé sf",
+    "section": "E.2 Récuperez le carreau d’appartenance (id) de chaque localité.",
+    "text": "E.2 Récuperez le carreau d’appartenance (id) de chaque localité.\ngrille_loc &lt;- st_intersects(x = grille_sn , y = loc_sn_2, sparse = TRUE) class(grille_loc) ## E.3 Comptez le nombre de localités dans chacun des carreaux. mf_init(sen) mf_map(x= grille_loc,add= TRUE ) grille_loc &lt;- st_as_sf(grille_loc)"
+  },
+  {
+    "objectID": "Exo_sf_R.html#carte",
+    "href": "Exo_sf_R.html#carte",
+    "title": "Exercice corrigé sf",
+    "section": "CARTE",
+    "text": "CARTE"
+  }
+]
