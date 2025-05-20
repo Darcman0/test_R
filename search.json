@@ -4,21 +4,21 @@
     "href": "index.html",
     "title": "Site Persos",
     "section": "",
-    "text": "Ceci est mon site web personnelle.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+    "text": "Ceci est mon site web personnelle.\n\n1 + 1\n\n[1] 2"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "text": "A propos de moi\n![Logo_Ussein](img/ussein.png)\n\n1 + 1\n\n[1] 2"
   },
   {
     "objectID": "Exo_sf_R.html",
     "href": "Exo_sf_R.html",
     "title": "Exercice corrigé sf",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n1 + 1\n\n[1] 2"
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n# warning = false\nlibrary(sf)\n\nWarning: le package 'sf' a été compilé avec la version R 4.4.3\n\n\nLinking to GEOS 3.13.0, GDAL 3.10.1, PROJ 9.5.1; sf_use_s2() is TRUE\n\nlibrary(mapsf)\n\nWarning: le package 'mapsf' a été compilé avec la version R 4.4.3\n\nlibrary(dplyr)\n\nWarning: le package 'dplyr' a été compilé avec la version R 4.4.3\n\n\n\nAttachement du package : 'dplyr'\n\n\nLes objets suivants sont masqués depuis 'package:stats':\n\n    filter, lag\n\n\nLes objets suivants sont masqués depuis 'package:base':\n\n    intersect, setdiff, setequal, union"
   },
   {
     "objectID": "Exo_sf_R.html#b.1-séléctionnez-par-attribut-ou-par-localisation-uniquement-les-localités-du-sénégal.",
